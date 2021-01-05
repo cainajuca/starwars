@@ -2,9 +2,17 @@
   text-align: center;
 }
 
+.images {
+  display: flex;
+  pointer-events: none;
+}
+
+.Yoda {
+  height: 40vmin;
+}
+
 .App-logo {
   height: 10vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,8 +32,21 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: 10;
+  height: 40px;
+  background: #29e0c1;
+  cursor: pointer;
+  border-radius: 10px;
+
+  margin: 10px;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  transition: background-color 0.4s;
+}
+
+button:hover {
+  background: #03fc62;
 }
 
 @keyframes App-logo-spin {
