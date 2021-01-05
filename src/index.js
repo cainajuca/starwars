@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// import axios from 'axios'
+
+// function getInfo() {
+  // axios.get('http://swapi.co/api/people/1').then(function(response) {
+  //   App(response.data)
+  // })
+// }
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
