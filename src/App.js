@@ -3,12 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import PlanetsSwapi from "./api/swapi/planets.swapi.js"
 
-function App() {
+function Appli() {
 
   const [planet, setPlanet] = useState("")
 
   useEffect(() => {
-    PlanetsSwapi.get(1).then((res) => setPlanet(res.data))
+    PlanetsSwapi.get(7).then((res) => setPlanet(res.data))
   }, [])
   
   return (
@@ -24,7 +24,6 @@ function App() {
           <div>Duração do dia: {planet.rotation_period}</div>
           
           <div>Duração do ano: {planet.orbital_period}</div>
-          
         </div>
 
         {/* <a
@@ -40,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default Appli;
