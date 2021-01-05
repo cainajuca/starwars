@@ -8,9 +8,8 @@ function App() {
   const [planet, setPlanet] = useState("")
 
   useEffect(() => {
-    // setPlanet("Marte")
     axios.get('http://swapi.dev/api/planets/1').then((res) => {
-      setPlanet(res.data.name)
+      setPlanet(res.data)
     })
   }, [])
   
@@ -19,18 +18,25 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <p>
-          Você está em {planet}!
-        </p>
+        <div>
+          <h2>Você está em {planet.name}!</h2>
 
-        <a
+          <div>População: {planet.population}</div>
+
+          <div>Duração do dia: {planet.rotation_period}</div>
+          
+          <div>Duração do ano: {planet.orbital_period}</div>
+          
+        </div>
+
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
