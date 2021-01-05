@@ -1,31 +1,17 @@
 import React, { useEffect, useState } from "react"
 import logo from './logo.svg';
 import './App.css';
-// import axios from 'axios'
-
-// export const PlanetComponent = () => {
-
-//   const [planet, setPlanet] = useState("")
-
-//   useEffect(() => {
-//     axios.get('http://swapi.co/api/people/1').then((res) => {
-//       setPlanet(res.data.name)
-//     })
-//   }, [])
-  
-//     return (
-//       <div>
-//         <h2> Você está em {planet}! </h2>
-//       </div>
-//     )
-// }
+import axios from 'axios'
 
 function App() {
 
   const [planet, setPlanet] = useState("")
 
   useEffect(() => {
-    setPlanet("Marte")
+    // setPlanet("Marte")
+    axios.get('http://swapi.dev/api/planets/1').then((res) => {
+      setPlanet(res.data.name)
+    })
   }, [])
   
   return (
